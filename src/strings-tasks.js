@@ -41,7 +41,7 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  return typeof value === 'string' || value instanceof String;
+  return Object.prototype.toString.call(value) === '[object String]';
 }
 /**
  * Returns the result of concatenation of two strings.
